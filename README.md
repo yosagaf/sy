@@ -1,103 +1,87 @@
 # Portfolio Website - Sagaf Youssouf
 
-A modern, minimalist portfolio website showcasing expertise in Computer Vision, MLOps, and Edge AI. Built with vanilla HTML, CSS, and JavaScript for optimal performance and simplicity.
+A modern, high-tech portfolio website showcasing expertise in Computer Vision, MLOps, and Edge AI. Built with vanilla HTML, CSS, and JavaScript for optimal performance and simplicity.
 
 ## 🚀 Features
 
+- **Modern High-Tech Design**: Dark theme with blue glow effects, animated borders, and luminous elements
 - **Responsive Design**: Fully responsive layout that works on all devices
-- **Modern UI**: Clean, elegant design with smooth animations
-- **Performance Optimized**: Fast loading times and optimized assets
+- **Bilingual Support**: English and French language switching
+- **Performance Optimized**: Fast loading times with vanilla JavaScript (no frameworks)
 - **SEO Friendly**: Proper meta tags and semantic HTML
 - **Accessible**: Follows accessibility best practices
+- **CI/CD**: Automatic deployment to GitHub Pages on every push
 
 ## 📁 Project Structure
 
 ```
 portfolio/
 ├── index.html          # Main HTML file
-├── styles.css          # All CSS styles
-├── script.js           # JavaScript for interactivity
+├── styles.css          # All CSS styles with modern glow effects
+├── script.js           # JavaScript for interactivity and i18n
+├── translations.js     # Bilingual content (EN/FR)
+├── favicon.svg         # Portfolio favicon
+├── .nojekyll          # Disable Jekyll processing
+├── _config.yml        # Jekyll config (disabled)
+├── .github/
+│   └── workflows/
+│       └── deploy.yml  # CI/CD workflow for GitHub Pages
 └── README.md          # This file
 ```
 
 ## 🛠️ Technologies Used
 
 - **HTML5**: Semantic markup
-- **CSS3**: Modern styling with CSS Grid and Flexbox
+- **CSS3**: Modern styling with CSS Grid, Flexbox, and advanced animations
 - **JavaScript (Vanilla)**: No frameworks, pure JavaScript for performance
-- **Google Fonts**: Inter font family
+- **Google Fonts**: Inter and JetBrains Mono font families
+- **GitHub Actions**: CI/CD for automatic deployment
+- **GitHub Pages**: Free hosting
 
-## 📦 Deployment on GitHub Pages
+## 📦 Deployment
 
-GitHub Pages is the recommended hosting solution - it's free, simple, and perfect for static websites.
+This portfolio uses **GitHub Pages** with **GitHub Actions** for automatic deployment.
 
-### Step 1: Create a GitHub Repository
+### Automatic Deployment (CI/CD)
 
-1. Go to [GitHub](https://github.com) and sign in
-2. Click the "+" icon in the top right corner
-3. Select "New repository"
-4. Name it `portfolio` (or any name you prefer)
-5. Make it **Public** (required for free GitHub Pages)
-6. Click "Create repository"
+The repository includes a GitHub Actions workflow that automatically deploys the site to GitHub Pages whenever you push changes to the `main` branch.
 
-### Step 2: Upload Your Files
+**Setup:**
 
-**Option A: Using GitHub Web Interface**
+1. **Create a GitHub Repository**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial portfolio commit"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/portfolio.git
+   git push -u origin main
+   ```
 
-1. In your new repository, click "uploading an existing file"
-2. Drag and drop all files from the `portfolio` folder:
-   - `index.html`
-   - `styles.css`
-   - `script.js`
-3. Add a commit message (e.g., "Initial portfolio commit")
-4. Click "Commit changes"
+2. **Configure GitHub Pages**
+   - Go to your repository → **Settings** → **Pages**
+   - Under **Source**, select **"GitHub Actions"** (not "Deploy from a branch")
+   - Save
 
-**Option B: Using Git Command Line**
+3. **That's it!** Every time you push changes, the site will automatically deploy.
 
-```bash
-# Navigate to your portfolio directory
-cd portfolio
+**Live URL:** `https://yosagaf.github.io/sy/`
 
-# Initialize git repository
-git init
+### Manual Deployment
 
-# Add all files
-git add .
+If you prefer manual deployment:
 
-# Commit files
-git commit -m "Initial portfolio commit"
+1. Go to repository **Settings** → **Pages**
+2. Select **"Deploy from a branch"**
+3. Choose branch: `main`, folder: `/ (root)`
+4. Save
 
-# Add your GitHub repository as remote (replace YOUR_USERNAME)
-git remote add origin https://github.com/YOUR_USERNAME/portfolio.git
+### Custom Domain (Optional)
 
-# Push to GitHub
-git branch -M main
-git push -u origin main
-```
-
-### Step 3: Enable GitHub Pages
-
-1. Go to your repository on GitHub
-2. Click on **Settings** (top menu)
-3. Scroll down to **Pages** (left sidebar)
-4. Under **Source**, select:
-   - Branch: `main` (or `master`)
-   - Folder: `/ (root)`
-5. Click **Save**
-6. GitHub will provide you with a URL like: `https://YOUR_USERNAME.github.io/portfolio/`
-
-### Step 4: Custom Domain (Optional)
-
-If you have a custom domain:
-
-1. In the Pages settings, add your domain under "Custom domain"
-2. Update your DNS records:
-   - Add a CNAME record pointing to `YOUR_USERNAME.github.io`
-   - Or add A records pointing to GitHub Pages IPs:
-     - 185.199.108.153
-     - 185.199.109.153
-     - 185.199.110.153
-     - 185.199.111.153
+1. In Pages settings, add your domain under "Custom domain"
+2. Update DNS records:
+   - **CNAME**: Point to `YOUR_USERNAME.github.io`
+   - Or **A records**: Point to GitHub Pages IPs (185.199.108.153, etc.)
 
 ## 🔧 Local Development
 
@@ -148,42 +132,41 @@ Edit CSS variables in `styles.css`:
 
 ## 📝 Updating Your Portfolio
 
-After making changes:
+After making changes, simply push to GitHub:
 
-1. **If using Git:**
-   ```bash
-   git add .
-   git commit -m "Update portfolio content"
-   git push
-   ```
+```bash
+git add .
+git commit -m "Update portfolio content"
+git push
+```
 
-2. **If using GitHub web interface:**
-   - Edit files directly on GitHub
-   - Or upload new versions
+The GitHub Actions workflow will automatically deploy your changes to GitHub Pages within 1-2 minutes.
 
-Changes will be live on GitHub Pages within a few minutes.
+## 🎨 Design Features
+
+- **Modern High-Tech Aesthetic**: Blue glow effects (`#00d4ff`) with animated borders
+- **Smooth Animations**: Fade-in effects, hover transitions, and pulse animations
+- **Luminous Elements**: Glowing timeline markers, borders, and text shadows
+- **Dark Theme**: Professional dark background with subtle grid patterns
+- **Interactive Cards**: Hover effects with gradient borders and shadows
 
 ## 🌐 Alternative Hosting Options
 
-### Google Sites
-- **Pros**: Very simple, no code needed
-- **Cons**: Limited customization, not ideal for developer portfolios
-- **Verdict**: Not recommended for this portfolio
-
 ### Netlify
-- **Pros**: Free, automatic deployments from Git, custom domains
-- **Cons**: Slightly more complex setup
-- **How**: Connect your GitHub repo to Netlify
+- **Pros**: Free, automatic deployments from Git, custom domains, drag & drop
+- **How**: Connect your GitHub repo or drag & drop files
 
 ### Vercel
 - **Pros**: Free, excellent performance, easy Git integration
-- **Cons**: More suited for React/Next.js projects
 - **How**: Import your GitHub repository
 
-### GitHub Pages (Recommended)
-- **Pros**: Free, simple, perfect for static sites, integrated with Git
-- **Cons**: None for this use case
-- **Verdict**: ✅ Best choice
+### Cloudflare Pages
+- **Pros**: Free, fast CDN, automatic deployments
+- **How**: Connect your GitHub repository
+
+### GitHub Pages (Current)
+- **Pros**: Free, integrated with Git, CI/CD included
+- **Status**: ✅ Currently deployed
 
 ## 📧 Contact
 
